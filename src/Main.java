@@ -8,6 +8,9 @@ public class Main {
         task4();
         task5();
         task6();
+        task7();
+        task8();
+
 
     }
 
@@ -68,6 +71,69 @@ public class Main {
     }
 
     public static void task5() {
+        System.out.println("Задача №5");
+        byte needPaint = 120;
+        byte klass_1_white = 2;
+        byte klass_1_brown = 4;
+        int needKlassWhite = needPaint / klass_1_white; //На 1 класс уходит белой краски
+        int needKlassBrown = needPaint / klass_1_brown; //На 1 класс уходит коричневой краски
+        int allKlasses = needPaint / (klass_1_white + klass_1_brown); //Сколько банок уходит на 1 класс -=сколько всего классов
+        System.out.println("В школе, где " + allKlasses + " классов, нужно " + needKlassWhite + " банок белой краски и " + needKlassBrown + " банок коричневой краски");
+
+    }
+
+    public static void task6() {
+        System.out.println("Задача №6");
+        byte banana = 5;
+        byte bananaGramm = 80; //80 грамм - 1 банана
+        int bananaGramms = banana * bananaGramm; //400
+        int milk = 200;
+        byte milkGramm = 105; //100мл - 105g
+        int milkGramms = milk * milkGramm; //210
+        byte iceCream = 2;
+        byte iceCreamGramm = 100;
+        int iceCreamGramms = iceCream * iceCreamGramm;// 200
+        byte egg = 4;
+        byte eggGramm = 70;
+        int eggGramms = egg * eggGramm; //280
+        int allGramms = bananaGramms + milkGramms + iceCreamGramms + eggGramms;
+        float allKilogramms = allGramms / 1000f;
+        System.out.println(allKilogramms);
+    }
+
+    public static void  task7() {
+        System.out.println("Задача №7");
+        int kilogramms = 7000;
+        int gramms = 250;
+        int need_250 = kilogramms / gramms;
+        System.out.println(need_250);
+        int gramms_500 = 500;
+        int need_500 = kilogramms / gramms_500;
+        System.out.println(need_500);
+        int averageValue = (gramms + gramms_500) / 2;
+        System.out.println(averageValue);
+    }
+
+    public static void  task8() {
+        System.out.println("Задача №8");
+        int Maria = 67760;
+        int Denis = 83690;
+        int Kristina = 76230;
+        int newSalaryMaria = Maria/10 + Maria; //10% в месяц
+        int newSalaryDenis = Denis/10 + Denis; //10% в месяц
+        int newSalaryKristina = Kristina/10 + Kristina; //10% в месяц
+        int moneyYearMaria = Maria * 12; //Годовая зп
+        int moneyYearDenis = Denis * 12; //Годовая зп
+        int moneyYearKristina = Kristina * 12; //Года зп
+        int newMoneyYearMaria = newSalaryMaria * 12; //Годовая зп %
+        int newMoneyYearDenis = newSalaryDenis * 12; //Годовая зп %
+        int newMoneyYearKristina = newSalaryKristina * 12; //Годовая зп %
+        int salaryMaria = newMoneyYearMaria - moneyYearMaria; //Разница
+        int salaryDenis = newMoneyYearDenis - moneyYearDenis; //Разница
+        int salaryKristina = newMoneyYearKristina - moneyYearKristina; //Разница
+        System.out.println("Маша теперь получает " + newSalaryMaria + " рублей. Годовой доход вырос на " + salaryMaria + " рублей");
+        System.out.println("Денис теперь получает " + newSalaryDenis + " рублей. Годовой доход вырос на " + salaryDenis + " рублей");
+        System.out.println("Кристина теперь получает " + newSalaryKristina + " рублей. Годовой доход вырос на " + salaryKristina + " рублей");
 
     }
 }
